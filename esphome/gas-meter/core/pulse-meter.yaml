@@ -22,6 +22,8 @@ sensor:
     # Unit of measurement
     unit_of_measurement: "m³/h"
     accuracy_decimals: 2
+    state_class: measurement
+    device_class: volume_flow_rate
     icon: "mdi:fire"
 
     # Timeout: if no pulse for 2 minutes, assume flow = 0
@@ -74,6 +76,7 @@ sensor:
     id: total_pulses_sensor
     unit_of_measurement: "pulses"
     accuracy_decimals: 0
+    state_class: total_increasing
     icon: "mdi:counter"
     filters:
       # Multiply back to get raw pulses
